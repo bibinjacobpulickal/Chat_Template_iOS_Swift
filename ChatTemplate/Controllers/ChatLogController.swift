@@ -92,8 +92,17 @@ class ChatLogController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = ChatLogHeaderView(date: randomTime())
+        return headerView
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return Int.random(in: 0...8)
     }
     
     // MARK: - Deinitializers

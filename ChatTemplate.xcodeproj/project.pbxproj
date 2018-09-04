@@ -20,6 +20,7 @@
 		DB21035421381EA5009939F4 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB21035021381EA5009939F4 /* UserCell.swift */; };
 		DB21035521381EA5009939F4 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB21035121381EA5009939F4 /* NavigationBarView.swift */; };
 		DB21035621381EA5009939F4 /* InputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB21035221381EA5009939F4 /* InputAccessoryView.swift */; };
+		DBC78FA7213E6B0200FA1D54 /* ChatLogHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC78FA6213E6B0200FA1D54 /* ChatLogHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		DB21035021381EA5009939F4 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		DB21035121381EA5009939F4 /* NavigationBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		DB21035221381EA5009939F4 /* InputAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputAccessoryView.swift; sourceTree = "<group>"; };
+		DBC78FA6213E6B0200FA1D54 /* ChatLogHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			children = (
 				DB21035021381EA5009939F4 /* UserCell.swift */,
 				DB21034F21381EA5009939F4 /* MessageCell.swift */,
+				DBC78FA6213E6B0200FA1D54 /* ChatLogHeaderView.swift */,
 				DB21035121381EA5009939F4 /* NavigationBarView.swift */,
 				DB21035221381EA5009939F4 /* InputAccessoryView.swift */,
 			);
@@ -225,6 +228,7 @@
 				DB21034821381E77009939F4 /* RandomModel.swift in Sources */,
 				DB21035521381EA5009939F4 /* NavigationBarView.swift in Sources */,
 				DB21033D21381E5C009939F4 /* MessagesController.swift in Sources */,
+				DBC78FA7213E6B0200FA1D54 /* ChatLogHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
