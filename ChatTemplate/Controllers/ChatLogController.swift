@@ -62,9 +62,13 @@ class ChatLogController: UITableViewController {
     }
     
     @objc private func scrollToEnd() {
-        if tableView.numberOfRows(inSection: 0) > 0 {
-            let lastIndexPath = IndexPath(row: tableView.numberOfRows(inSection: 0) - 1, section: 0)
-            tableView.scrollToRow(at: lastIndexPath, at: .top, animated: true)
+        if tableView.numberOfSections > 0 {
+            let lastSection = tableView.numberOfSections - 1
+            if tableView.numberOfRows(inSection: lastSection) > 0 {
+                let lastRow = tableView.numberOfRows(inSection: lastSection) - 1
+                let lastIndexPath = IndexPath(row: lastRow, section: lastSection)
+                tableView.scrollToRow(at: lastIndexPath, at: .bottom, animated: true)
+            }
         }
     }
     
