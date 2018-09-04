@@ -27,7 +27,7 @@ class UserCell: UITableViewCell {
     
     let profileImageView: UIImageView = {
         let iv = UIImageView()
-        iv.layer.cornerRadius = 27
+        iv.layer.cornerRadius = 32
         iv.layer.masksToBounds = true
         return iv
     }()
@@ -71,9 +71,9 @@ class UserCell: UITableViewCell {
     
     private func setupViews() {
         
-        separatorInset = UIEdgeInsets(top: 0, left: 78, bottom: 0, right: 0)
+        separatorInset = UIEdgeInsets(top: 0, left: 96, bottom: 0, right: 0)
         
-        addView(profileImageView, anchors: [.leading, .centerY], padding: UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0), size: CGSize(width: 54, height: 54))
+        addView(profileImageView, anchors: [.top, .bottom, .leading], padding: UIEdgeInsets(top: 4, left: 16, bottom: 4, right: 0), size: CGSize(width: 64, height: 64))
         
         addView(timeLabel, anchors: [.top, .trailing], padding: UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 8), size: CGSize(width: 100, height: 20))
         
