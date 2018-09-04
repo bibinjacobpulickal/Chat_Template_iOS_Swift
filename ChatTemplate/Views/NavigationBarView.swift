@@ -34,7 +34,7 @@ class NavigationBarView: UIButton {
         if let name = userViewModel?.name?.components(separatedBy: " ")[0] {
             
             nameLabel.text = name
-            profileImageView.loadImageFromCache(userViewModel?.profileImageUrl)
+            profileImageView.loadCachedImage(from: userViewModel?.profileImageUrl)
             
             let width = NSString(string: name).size(withAttributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)]).width + 8
             addView(nameLabel, anchors: [.top, .bottom], padding: .zero, size: CGSize(width: width, height: 0))

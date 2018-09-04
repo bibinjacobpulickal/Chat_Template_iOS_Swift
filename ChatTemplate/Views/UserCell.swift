@@ -21,7 +21,7 @@ class UserCell: UITableViewCell {
                 messageCountLabel.text = userViewModel?.newMessageCount
             }
             detailLabel.text = userViewModel?.lastMessage
-            profileImageView.loadImageFrom(urlString: userViewModel?.profileImageUrl)
+            profileImageView.loadCachedImage(from: userViewModel?.profileImageUrl)
         }
     }
     

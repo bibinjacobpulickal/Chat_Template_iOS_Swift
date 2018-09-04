@@ -12,20 +12,17 @@ let imageCache = NSCache<NSString, UIImage>()
 
 extension UIImageView {
     
-    func loadImageFromCache(_ urlString: String?) {
+    func loadCachedImage(from urlString: String?) {
         
         if let urlString = urlString,
             let chachedImage = imageCache.object(forKey: urlString as NSString) {
-            
-            DispatchQueue.main.async {
-                self.image = chachedImage
-            }
+            self.image = chachedImage
         } else {
-            loadImageFrom(urlString: urlString)
+            loadImage(from: urlString)
         }
     }
     
-    func loadImageFrom(urlString: String?) {
+    func loadImage(from urlString: String?) {
         
         guard let urlString = urlString,
             let url = URL(string: urlString) else { return }
