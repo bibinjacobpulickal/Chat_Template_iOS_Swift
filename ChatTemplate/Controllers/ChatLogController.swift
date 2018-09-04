@@ -1,6 +1,6 @@
 //
 //  ChatLogController.swift
-//  RocketChat
+//  ChatTemplate
 //
 //  Created by Bibin Jacob Pulickal on 28/08/18.
 //  Copyright © 2018 Bibin Jacob Pulickal. All rights reserved.
