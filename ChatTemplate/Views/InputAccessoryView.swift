@@ -48,7 +48,8 @@ class InputAccessoryView: UIView {
     
     @objc func handleSend() {
         
-        guard let text = textField.text, text != "" else { return }
+        guard let text = textField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
+            text != "" else { return }
         delegate?.send(text: text)
         textField.text = nil
     }
