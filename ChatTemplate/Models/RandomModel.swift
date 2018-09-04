@@ -10,6 +10,12 @@ import Foundation
 
 var dateFormatter: DateFormatter {
     let dateFormatter = DateFormatter()
+    dateFormatter.dateStyle = .medium
+    return dateFormatter
+}
+
+var timeFormatter: DateFormatter {
+    let dateFormatter = DateFormatter()
     dateFormatter.timeStyle = .short
     return dateFormatter
 }
@@ -30,7 +36,7 @@ var randomUserViewModel: UserViewModel {
         lastMessage: messages.randomElement(),
         profileImageUrl: "https://picsum.photos/200/?random",
         newMessageCount: "\(Int.random(in: 1..<99))",
-        lastMessageTime: dateFormatter.string(from: randomTime()))
+        lastMessageTime: timeFormatter.string(from: randomTime()))
 }
 
 var messages = ["Oy", "Hi, Ssup?", "Lorem Ipsum is simply dummy text of the printing and typesetting industry",

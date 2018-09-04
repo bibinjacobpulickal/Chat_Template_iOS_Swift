@@ -84,7 +84,7 @@ class ChatLogController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! MessageCell
-        cell.messageViewModel = MessageViewModel(text: messages[indexPath.row], time: dateFormatter.string(from: randomTime()), isIncoming: Bool.random())
+        cell.messageViewModel = MessageViewModel(text: messages[indexPath.row], time: timeFormatter.string(from: randomTime()), isIncoming: Bool.random())
         return cell
     }
     
