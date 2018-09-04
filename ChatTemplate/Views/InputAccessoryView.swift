@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol InputAccessoryViewDelegate {
-    func send(text: String)
-}
-
 class InputAccessoryView: UIView {
     
     var delegate: InputAccessoryViewDelegate?

@@ -21,6 +21,7 @@
 		DB21035521381EA5009939F4 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB21035121381EA5009939F4 /* NavigationBarView.swift */; };
 		DB21035621381EA5009939F4 /* InputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB21035221381EA5009939F4 /* InputAccessoryView.swift */; };
 		DBC78FA7213E6B0200FA1D54 /* ChatLogHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC78FA6213E6B0200FA1D54 /* ChatLogHeaderView.swift */; };
+		DBC78FAA213EF7D100FA1D54 /* InputAccessoryViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC78FA9213EF7D100FA1D54 /* InputAccessoryViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		DB21035121381EA5009939F4 /* NavigationBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		DB21035221381EA5009939F4 /* InputAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputAccessoryView.swift; sourceTree = "<group>"; };
 		DBC78FA6213E6B0200FA1D54 /* ChatLogHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogHeaderView.swift; sourceTree = "<group>"; };
+		DBC78FA9213EF7D100FA1D54 /* InputAccessoryViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputAccessoryViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		DB21031621381C83009939F4 /* ChatTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				DBC78FA8213EF77D00FA1D54 /* Protocols */,
 				DB21032A21381CEB009939F4 /* Singletons */,
 				DB21033421381DF7009939F4 /* Models */,
 				DB21033721381E3E009939F4 /* ViewModels */,
@@ -147,6 +150,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		DBC78FA8213EF77D00FA1D54 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DBC78FA9213EF7D100FA1D54 /* InputAccessoryViewDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -216,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBC78FAA213EF7D100FA1D54 /* InputAccessoryViewDelegate.swift in Sources */,
 				DB21033E21381E5C009939F4 /* ChatLogController.swift in Sources */,
 				DB21035421381EA5009939F4 /* UserCell.swift in Sources */,
 				DB21034E21381E98009939F4 /* UserViewModel.swift in Sources */,
