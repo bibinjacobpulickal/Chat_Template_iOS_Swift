@@ -24,20 +24,12 @@ class MessagesController: UITableViewController {
         tableView.register(UserCell.self, forCellReuseIdentifier: reuseIdentifier)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        tabBarController?.tabBar.isHidden = false
-    }
-    
     // MARK: - Setup Views
     
     private func setupNavigationBar() {
         navigationItem.title = "Messages"
         navigationItem.titleView = NavigationBarView(userViewModel: randomUserViewModel)
-        if #available(iOS 11.0, *) {
-            navigationController?.navigationBar.prefersLargeTitles = true
-        }
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     // MARK: - Table View Delegate
