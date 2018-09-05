@@ -46,9 +46,9 @@ class MessageCell: UITableViewCell {
         
         backgroundColor = .clear
         
-        addView(containerView, anchors: [.top, .bottom], padding: UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0))
-        addView(messageLabel, anchors: [.top, .bottom], padding: UIEdgeInsets(top: 16, left: 0, bottom: 36, right: 0))
-        addView(timeLabel, anchors: [.bottom], top: messageLabel.bottomAnchor, trailing: messageLabel.trailingAnchor, padding: UIEdgeInsets(top: 4, left: 0, bottom: 20, right: 0), size: CGSize(width: 0, height: 12))
+        addView(containerView, anchors: [.top, .bottom], padding: UIEdgeInsets(top: 8, bottom: 8))
+        addView(messageLabel, anchors: [.top, .bottom], padding: UIEdgeInsets(top: 16, bottom: 36))
+        addView(timeLabel, anchors: [.bottom], top: messageLabel.bottomAnchor, trailing: messageLabel.trailingAnchor, padding: UIEdgeInsets(top: 4, bottom: 20), size: CGSize(height: 12))
         
         let maximumWidth = UIScreen.main.bounds.width * 2/3
         let minimumWidth: CGFloat = 52

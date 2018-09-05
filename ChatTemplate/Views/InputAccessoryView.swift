@@ -37,9 +37,9 @@ class InputAccessoryView: UIView {
         self.delegate = delegate
         self.backgroundColor = .white
         
-        addView(separatorView, anchors: [.top, .leading, .trailing], size: CGSize(width: 0, height: 1))
-        addView(sendButton, anchors: [.top, .bottom, .trailing], padding: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 8), size: CGSize(width: 64, height: 0))
-        addView(textField, anchors: [.top, .leading, .bottom], trailing: sendButton.leadingAnchor, padding: UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16))
+        addView(separatorView, anchors: [.top, .leading, .trailing], size: CGSize(height: 1))
+        addView(sendButton, anchors: [.top, .bottom, .trailing], padding: UIEdgeInsets(trailing: 8), size: CGSize(width: 64))
+        addView(textField, anchors: [.top, .leading, .bottom], trailing: sendButton.leadingAnchor, padding: UIEdgeInsets(leading: 16, trailing: 16))
     }
     
     @objc func handleSend() {

@@ -48,7 +48,7 @@ class NavigationBarView: UIButton {
     
     private func setupViews(showStatus: Bool) {
         addView(nameLabel, anchors: [.top])
-        addView(profileImageView, anchors: [.centerY], trailing: nameLabel.leadingAnchor, padding: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 8), size: CGSize(width: 40, height: 40))
+        addView(profileImageView, anchors: [.centerY], trailing: nameLabel.leadingAnchor, padding: UIEdgeInsets(trailing: 8), size: CGSize(width: 40, height: 40))
         if showStatus {
             addView(statusLabel, top: nameLabel.bottomAnchor, leading: nameLabel.leadingAnchor)
         } else {

@@ -73,15 +73,15 @@ class UserCell: UITableViewCell {
         
         separatorInset = UIEdgeInsets(top: 0, left: 96, bottom: 0, right: 0)
         
-        addView(profileImageView, anchors: [.top, .bottom, .leading], padding: UIEdgeInsets(top: 4, left: 16, bottom: 4, right: 0), size: CGSize(width: 64, height: 64))
+        addView(profileImageView, anchors: [.top, .bottom, .leading], padding: UIEdgeInsets(top: 4, leading: 16, bottom: 4), size: CGSize(width: 64, height: 64))
         
-        addView(timeLabel, anchors: [.top, .trailing], padding: UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 8), size: CGSize(width: 100, height: 20))
+        addView(timeLabel, anchors: [.top, .trailing], padding: UIEdgeInsets(top: 10, trailing: 8), size: CGSize(width: 100, height: 20))
         
-        addView(nameLabel, top: topAnchor, leading: profileImageView.trailingAnchor, bottom: nil, trailing: timeLabel.leadingAnchor, padding: UIEdgeInsets(top: 10, left: 16, bottom: 0, right: 8), size: CGSize(width: 0, height: 20))
+        addView(nameLabel, top: topAnchor, leading: profileImageView.trailingAnchor, trailing: timeLabel.leadingAnchor, padding: UIEdgeInsets(top: 10, leading: 16, trailing: 8), size: CGSize(height: 20))
         
-        addView(messageCountLabel, top: timeLabel.bottomAnchor, leading: nil, bottom: nil, trailing: trailingAnchor, padding: UIEdgeInsets(top: 4, left: 0, bottom: 4, right: 8), size: CGSize(width: 0, height: 24))
+        addView(messageCountLabel, top: timeLabel.bottomAnchor, trailing: trailingAnchor, padding: UIEdgeInsets(top: 4, bottom: 4, trailing: 8), size: CGSize(height: 24))
         
-        addView(detailLabel, top: nameLabel.bottomAnchor, leading: nameLabel.leadingAnchor, bottom: bottomAnchor, padding: UIEdgeInsets(top: 4, left: 0, bottom: 4, right: 8))
+        addView(detailLabel, top: nameLabel.bottomAnchor, leading: nameLabel.leadingAnchor, bottom: bottomAnchor, padding: UIEdgeInsets(top: 4, bottom: 4, trailing: 8))
         
         messageCountLabel.widthAnchor.constraint(greaterThanOrEqualToConstant: 24).isActive = true
         detailLabel.trailingAnchor.constraint(lessThanOrEqualTo: messageCountLabel.leadingAnchor, constant: -8).isActive = true
