@@ -16,7 +16,7 @@ class ChatLogController: UITableViewController {
     
     var userViewModel: UserViewModel? {
         didSet {
-            self.navigationItem.titleView = NavigationBarView(userViewModel: userViewModel)
+            self.navigationItem.titleView = NavigationBarView(userViewModel: userViewModel, showStatus: true)
         }
     }
     

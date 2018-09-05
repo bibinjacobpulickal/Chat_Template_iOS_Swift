@@ -28,7 +28,7 @@ class MessagesController: UITableViewController {
     
     private func setupNavigationBar() {
         navigationItem.title = "Messages"
-        navigationItem.titleView = NavigationBarView(userViewModel: randomUserViewModel)
+        navigationItem.titleView = NavigationBarView(userViewModel: randomUserViewModel, showStatus: false)
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     

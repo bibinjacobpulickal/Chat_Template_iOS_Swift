@@ -10,6 +10,7 @@ import Foundation
 
 struct UserViewModel {
     var name: String?
+    var status: String?
     var lastMessage: String?
     var profileImageUrl: String?
     var newMessageCount: String?

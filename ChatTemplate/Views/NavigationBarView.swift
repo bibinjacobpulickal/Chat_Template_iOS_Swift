@@ -23,23 +23,36 @@ class NavigationBarView: UIButton {
         return label
     }()
     
-    init(userViewModel: UserViewModel?) {
+    let statusLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .darkGray
+        label.font = UIFont.systemFont(ofSize: 12)
+        return label
+    }()
+    
+    init(userViewModel: UserViewModel?, showStatus: Bool) {
         super.init(frame: .zero)
         
-        setupViews(for: userViewModel)
+        set(userViewModel: userViewModel)
+        setupViews(showStatus: showStatus)
     }
     
-    func setupViews(for userViewModel: UserViewModel?) {
+    private func set(userViewModel: UserViewModel?) {
         
         if let name = userViewModel?.name?.components(separatedBy: " ")[0] {
-            
             nameLabel.text = name
+            statusLabel.text = userViewModel?.status
             profileImageView.loadCachedImage(from: userViewModel?.profileImageUrl)
-            
-            let width = NSString(string: name).size(withAttributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)]).width + 8
-            addView(nameLabel, anchors: [.top, .bottom], padding: .zero, size: CGSize(width: width, height: 0))
-            addView(profileImageView, anchors: [.centerY], trailing: nameLabel.leadingAnchor, padding: UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 8), size: CGSize(width: 40, height: 40))
-            nameLabel.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 32).isActive = true
+        }
+    }
+    
+    private func setupViews(showStatus: Bool) {
+        addView(nameLabel, anchors: [.top])
+        addView(profileImageView, anchors: [.centerY], trailing: nameLabel.leadingAnchor, padding: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 8), size: CGSize(width: 40, height: 40))
+        if showStatus {
+            addView(statusLabel, top: nameLabel.bottomAnchor, leading: nameLabel.leadingAnchor)
+        } else {
+            nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         }
     }
     

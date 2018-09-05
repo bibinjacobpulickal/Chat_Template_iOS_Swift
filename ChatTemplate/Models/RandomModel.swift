@@ -33,6 +33,7 @@ var randomUserViewModel: UserViewModel {
     
     return UserViewModel(
         name: randomFirstName + " " + randomLastName,
+        status: Bool.random() ? "Online" : "Offline",
         lastMessage: messages.randomElement(),
         profileImageUrl: "https://picsum.photos/200/?random",
         newMessageCount: "\(Int.random(in: 1..<99))",
