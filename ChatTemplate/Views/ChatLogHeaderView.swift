@@ -25,7 +25,7 @@ class ChatLogHeaderView: UIView {
         
         dateLabel.text = dateFormatter.string(from: date)
         
-        addView(dateLabel, anchors: Anchor.centers, size: CGSize(width: 128, height: 24))
+        addView(dateLabel, anchors: Anchors.centers, size: CGSize(width: 128, height: 24))
     }
     
     required init?(coder aDecoder: NSCoder) {
