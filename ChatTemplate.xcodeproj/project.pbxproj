@@ -90,8 +90,8 @@
 		DB21031621381C83009939F4 /* ChatTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				DBC78FB421410E5700FA1D54 /* Networking Module */,
-				DBC78FB321410C1E00FA1D54 /* Auto Layout Module */,
+				DBC78FB421410E5700FA1D54 /* Networking Manager */,
+				DBC78FB321410C1E00FA1D54 /* Auto Layout Manager */,
 				DBC78FA8213EF77D00FA1D54 /* Protocols */,
 				DB21032A21381CEB009939F4 /* Singletons */,
 				DB21033421381DF7009939F4 /* Models */,
@@ -174,7 +174,7 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		DBC78FB321410C1E00FA1D54 /* Auto Layout Module */ = {
+		DBC78FB321410C1E00FA1D54 /* Auto Layout Manager */ = {
 			isa = PBXGroup;
 			children = (
 				DBC78FAB2140F33500FA1D54 /* LayoutAnchors.swift */,
@@ -182,10 +182,10 @@
 				DB21034121381E67009939F4 /* UIViewExtensions.swift */,
 				DBC78FB121410AF600FA1D54 /* UIEdgeInsetsExtension.swift */,
 			);
-			path = "Auto Layout Module";
+			path = "Auto Layout Manager";
 			sourceTree = "<group>";
 		};
-		DBC78FB421410E5700FA1D54 /* Networking Module */ = {
+		DBC78FB421410E5700FA1D54 /* Networking Manager */ = {
 			isa = PBXGroup;
 			children = (
 				DBC78FB52141106000FA1D54 /* NetworkingMethods.swift */,
@@ -195,7 +195,7 @@
 				DBC78FBB2141108900FA1D54 /* URLRequestExtension.swift */,
 				DBC78FBF2141113200FA1D54 /* CodableExtensions.swift */,
 			);
-			path = "Networking Module";
+			path = "Networking Manager";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
