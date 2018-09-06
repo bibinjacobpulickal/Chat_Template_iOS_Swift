@@ -114,7 +114,7 @@ extension UIView {
         }
         
         if anchors.contains(.left) || left != nil {
-            view.leadingAnchor.constraint(equalTo: left ?? leftAnchor, constant: padding.left).isActive = true
+            view.leftAnchor.constraint(equalTo: left ?? leftAnchor, constant: padding.left).isActive = true
         }
         
         if anchors.contains(.leading) || leading != nil {
@@ -126,7 +126,7 @@ extension UIView {
         }
         
         if anchors.contains(.right) || right != nil {
-            view.leadingAnchor.constraint(equalTo: right ?? rightAnchor, constant: -padding.right).isActive = true
+            view.rightAnchor.constraint(equalTo: right ?? rightAnchor, constant: -padding.right).isActive = true
         }
         
         if anchors.contains(.trailing) || trailing != nil {

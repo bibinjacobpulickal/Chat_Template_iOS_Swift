@@ -71,7 +71,7 @@ class UserCell: UITableViewCell {
     
     private func setupViews() {
         
-        separatorInset = UIEdgeInsets(top: 0, left: 96, bottom: 0, right: 0)
+        separatorInset = UIEdgeInsets(left: 96)
         
         addView(profileImageView, anchors: [.top, .bottom, .leading], padding: UIEdgeInsets(top: 4, leading: 16, bottom: 4), size: CGSize(width: 64, height: 64))
         
