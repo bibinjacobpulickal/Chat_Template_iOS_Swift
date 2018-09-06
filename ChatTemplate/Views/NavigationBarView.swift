@@ -10,6 +10,8 @@ import UIKit
 
 class NavigationBarView: UIButton {
     
+    // MARK: - Views
+    
     let profileImageView: UIImageView = {
         let iv = UIImageView()
         iv.layer.cornerRadius = 20
@@ -30,12 +32,16 @@ class NavigationBarView: UIButton {
         return label
     }()
     
+    // MARK: - Initializers
+    
     init(userViewModel: UserViewModel?, showStatus: Bool) {
         super.init(frame: .zero)
         
         set(userViewModel: userViewModel)
         setupViews(showStatus: showStatus)
     }
+    
+    // MARK: - Setup Views
     
     private func set(userViewModel: UserViewModel?) {
         

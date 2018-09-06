@@ -10,6 +10,8 @@ import UIKit
 
 class ChatLogHeaderView: UIView {
     
+    // MARK: - Views
+    
     let dateLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
@@ -27,6 +29,8 @@ class ChatLogHeaderView: UIView {
         
         addView(dateLabel, anchors: Anchors.centers, size: CGSize(width: 128, height: 24))
     }
+    
+    // MARK: - Initializers
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

@@ -10,6 +10,8 @@ import UIKit
 
 class MessageCell: UITableViewCell {
     
+    // MARK: - Variables
+    
     var messageViewModel: MessageViewModel? {
         didSet {
             timeLabel.text = messageViewModel?.time
@@ -20,6 +22,8 @@ class MessageCell: UITableViewCell {
             }
         }
     }
+    
+    // MARK: - Views
     
     let containerView: UIView = {
         let view = UIView()
@@ -41,11 +45,19 @@ class MessageCell: UITableViewCell {
         return label
     }()
     
+    // MARK: - Initializers
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         backgroundColor = .clear
         
+        setupViews()
+    }
+    
+    // MARK: - Setup Views
+    
+    private func setupViews() {
         addView(containerView, anchors: [.top, .bottom], padding: UIEdgeInsets(top: 8, bottom: 8))
         addView(messageLabel, anchors: [.top, .bottom], padding: UIEdgeInsets(top: 16, bottom: 36))
         addView(timeLabel, anchors: [.bottom], top: messageLabel.bottomAnchor, trailing: messageLabel.trailingAnchor, padding: UIEdgeInsets(top: 4, bottom: 20), size: CGSize(height: 12))
@@ -73,6 +85,8 @@ class MessageCell: UITableViewCell {
             leadingAnchorConstraint?.isActive = false
         }
     }
+    
+    // MARK: - Prepare Reuse
     
     override func prepareForReuse() {
         super.prepareForReuse()

@@ -10,7 +10,11 @@ import UIKit
 
 class InputAccessoryView: UIView {
     
+    // MARK: - Variables
+    
     var delegate: InputAccessoryViewDelegate?
+    
+    // MARK: - Views
     
     let textField: UITextField = {
         let textField = UITextField()
@@ -31,16 +35,26 @@ class InputAccessoryView: UIView {
         return sendButton
     }()
     
+    // MARK: - Initializers
+    
     init(delegate: InputAccessoryViewDelegate?, height: CGFloat?) {
         super.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: height ?? 48))
         
         self.delegate = delegate
         self.backgroundColor = .white
         
+        setupViews()
+    }
+    
+    // MARK: - Setup Views
+    
+    private func setupViews() {
         addView(separatorView, anchors: [.top, .leading, .trailing], size: CGSize(height: 1))
         addView(sendButton, anchors: [.top, .bottom, .trailing], padding: UIEdgeInsets(trailing: 8), size: CGSize(width: 64))
         addView(textField, anchors: [.top, .leading, .bottom], trailing: sendButton.leadingAnchor, padding: UIEdgeInsets(leading: 16, trailing: 16))
     }
+    
+    // MARK: - Handlers
     
     @objc func handleSend() {
         

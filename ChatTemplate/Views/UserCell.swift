@@ -10,6 +10,8 @@ import UIKit
 
 class UserCell: UITableViewCell {
     
+    // MARK: - Variables
+    
     var userViewModel: UserViewModel? {
         didSet {
             nameLabel.text = userViewModel?.name
@@ -24,6 +26,8 @@ class UserCell: UITableViewCell {
             profileImageView.loadCachedImage(from: userViewModel?.profileImageUrl)
         }
     }
+    
+    // MARK: - Views
     
     let profileImageView: UIImageView = {
         let iv = UIImageView()
@@ -63,11 +67,15 @@ class UserCell: UITableViewCell {
         return label
     }()
     
+    // MARK: - Initializers
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
         
         setupViews()
     }
+    
+    // MARK: - Setup Views
     
     private func setupViews() {
         
