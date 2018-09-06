@@ -22,6 +22,9 @@
 		DB21035621381EA5009939F4 /* InputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB21035221381EA5009939F4 /* InputAccessoryView.swift */; };
 		DBC78FA7213E6B0200FA1D54 /* ChatLogHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC78FA6213E6B0200FA1D54 /* ChatLogHeaderView.swift */; };
 		DBC78FAA213EF7D100FA1D54 /* InputAccessoryViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC78FA9213EF7D100FA1D54 /* InputAccessoryViewDelegate.swift */; };
+		DBC78FAC2140F33500FA1D54 /* LayoutAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC78FAB2140F33500FA1D54 /* LayoutAnchors.swift */; };
+		DBC78FB02140F3B300FA1D54 /* CGSizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC78FAF2140F3B300FA1D54 /* CGSizeExtension.swift */; };
+		DBC78FB221410AF600FA1D54 /* UIEdgeInsetsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC78FB121410AF600FA1D54 /* UIEdgeInsetsExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		DB21035221381EA5009939F4 /* InputAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputAccessoryView.swift; sourceTree = "<group>"; };
 		DBC78FA6213E6B0200FA1D54 /* ChatLogHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogHeaderView.swift; sourceTree = "<group>"; };
 		DBC78FA9213EF7D100FA1D54 /* InputAccessoryViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputAccessoryViewDelegate.swift; sourceTree = "<group>"; };
+		DBC78FAB2140F33500FA1D54 /* LayoutAnchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAnchors.swift; sourceTree = "<group>"; };
+		DBC78FAF2140F3B300FA1D54 /* CGSizeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGSizeExtension.swift; sourceTree = "<group>"; };
+		DBC78FB121410AF600FA1D54 /* UIEdgeInsetsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,7 @@
 		DB21031621381C83009939F4 /* ChatTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				DBC78FB321410C1E00FA1D54 /* Auto Layout Module */,
 				DBC78FA8213EF77D00FA1D54 /* Protocols */,
 				DB21032A21381CEB009939F4 /* Singletons */,
 				DB21033421381DF7009939F4 /* Models */,
@@ -115,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				DB21034021381E67009939F4 /* UIImageExtensions.swift */,
-				DB21034121381E67009939F4 /* UIViewExtensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -156,6 +162,17 @@
 				DBC78FA9213EF7D100FA1D54 /* InputAccessoryViewDelegate.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DBC78FB321410C1E00FA1D54 /* Auto Layout Module */ = {
+			isa = PBXGroup;
+			children = (
+				DBC78FAB2140F33500FA1D54 /* LayoutAnchors.swift */,
+				DBC78FAF2140F3B300FA1D54 /* CGSizeExtension.swift */,
+				DB21034121381E67009939F4 /* UIViewExtensions.swift */,
+				DBC78FB121410AF600FA1D54 /* UIEdgeInsetsExtension.swift */,
+			);
+			path = "Auto Layout Module";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,8 +245,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBC78FAA213EF7D100FA1D54 /* InputAccessoryViewDelegate.swift in Sources */,
+				DBC78FAC2140F33500FA1D54 /* LayoutAnchors.swift in Sources */,
 				DB21033E21381E5C009939F4 /* ChatLogController.swift in Sources */,
 				DB21035421381EA5009939F4 /* UserCell.swift in Sources */,
+				DBC78FB02140F3B300FA1D54 /* CGSizeExtension.swift in Sources */,
+				DBC78FB221410AF600FA1D54 /* UIEdgeInsetsExtension.swift in Sources */,
 				DB21034E21381E98009939F4 /* UserViewModel.swift in Sources */,
 				DB21034421381E67009939F4 /* UIViewExtensions.swift in Sources */,
 				DB21035621381EA5009939F4 /* InputAccessoryView.swift in Sources */,
