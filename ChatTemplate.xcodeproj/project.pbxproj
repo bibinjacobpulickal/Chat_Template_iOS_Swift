@@ -25,6 +25,11 @@
 		DBC78FAC2140F33500FA1D54 /* LayoutAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC78FAB2140F33500FA1D54 /* LayoutAnchors.swift */; };
 		DBC78FB02140F3B300FA1D54 /* CGSizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC78FAF2140F3B300FA1D54 /* CGSizeExtension.swift */; };
 		DBC78FB221410AF600FA1D54 /* UIEdgeInsetsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC78FB121410AF600FA1D54 /* UIEdgeInsetsExtension.swift */; };
+		DBC78FB82141106000FA1D54 /* NetworkingMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC78FB52141106000FA1D54 /* NetworkingMethods.swift */; };
+		DBC78FBC2141108900FA1D54 /* URLRequestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC78FBB2141108900FA1D54 /* URLRequestExtension.swift */; };
+		DBC78FBE214110F400FA1D54 /* NetworkingVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC78FBD214110F400FA1D54 /* NetworkingVariables.swift */; };
+		DBC78FC02141113200FA1D54 /* CodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC78FBF2141113200FA1D54 /* CodableExtensions.swift */; };
+		DBC78FC22141135500FA1D54 /* NetworkingFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC78FC12141135500FA1D54 /* NetworkingFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +53,11 @@
 		DBC78FAB2140F33500FA1D54 /* LayoutAnchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAnchors.swift; sourceTree = "<group>"; };
 		DBC78FAF2140F3B300FA1D54 /* CGSizeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGSizeExtension.swift; sourceTree = "<group>"; };
 		DBC78FB121410AF600FA1D54 /* UIEdgeInsetsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsExtension.swift; sourceTree = "<group>"; };
+		DBC78FB52141106000FA1D54 /* NetworkingMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingMethods.swift; sourceTree = "<group>"; };
+		DBC78FBB2141108900FA1D54 /* URLRequestExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestExtension.swift; sourceTree = "<group>"; };
+		DBC78FBD214110F400FA1D54 /* NetworkingVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingVariables.swift; sourceTree = "<group>"; };
+		DBC78FBF2141113200FA1D54 /* CodableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableExtensions.swift; sourceTree = "<group>"; };
+		DBC78FC12141135500FA1D54 /* NetworkingFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +90,7 @@
 		DB21031621381C83009939F4 /* ChatTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				DBC78FB421410E5700FA1D54 /* Networking Module */,
 				DBC78FB321410C1E00FA1D54 /* Auto Layout Module */,
 				DBC78FA8213EF77D00FA1D54 /* Protocols */,
 				DB21032A21381CEB009939F4 /* Singletons */,
@@ -121,7 +132,6 @@
 		DB21033521381E27009939F4 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				DB21034021381E67009939F4 /* UIImageExtensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -173,6 +183,19 @@
 				DBC78FB121410AF600FA1D54 /* UIEdgeInsetsExtension.swift */,
 			);
 			path = "Auto Layout Module";
+			sourceTree = "<group>";
+		};
+		DBC78FB421410E5700FA1D54 /* Networking Module */ = {
+			isa = PBXGroup;
+			children = (
+				DBC78FB52141106000FA1D54 /* NetworkingMethods.swift */,
+				DBC78FBD214110F400FA1D54 /* NetworkingVariables.swift */,
+				DBC78FC12141135500FA1D54 /* NetworkingFunctions.swift */,
+				DB21034021381E67009939F4 /* UIImageExtensions.swift */,
+				DBC78FBB2141108900FA1D54 /* URLRequestExtension.swift */,
+				DBC78FBF2141113200FA1D54 /* CodableExtensions.swift */,
+			);
+			path = "Networking Module";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBC78FB82141106000FA1D54 /* NetworkingMethods.swift in Sources */,
 				DBC78FAA213EF7D100FA1D54 /* InputAccessoryViewDelegate.swift in Sources */,
 				DBC78FAC2140F33500FA1D54 /* LayoutAnchors.swift in Sources */,
 				DB21033E21381E5C009939F4 /* ChatLogController.swift in Sources */,
@@ -259,8 +283,12 @@
 				DB21031821381C83009939F4 /* AppDelegate.swift in Sources */,
 				DB21034821381E77009939F4 /* RandomModel.swift in Sources */,
 				DB21035521381EA5009939F4 /* NavigationBarView.swift in Sources */,
+				DBC78FBC2141108900FA1D54 /* URLRequestExtension.swift in Sources */,
 				DB21033D21381E5C009939F4 /* MessagesController.swift in Sources */,
+				DBC78FBE214110F400FA1D54 /* NetworkingVariables.swift in Sources */,
 				DBC78FA7213E6B0200FA1D54 /* ChatLogHeaderView.swift in Sources */,
+				DBC78FC02141113200FA1D54 /* CodableExtensions.swift in Sources */,
+				DBC78FC22141135500FA1D54 /* NetworkingFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
