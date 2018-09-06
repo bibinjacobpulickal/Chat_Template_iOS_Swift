@@ -18,13 +18,14 @@ class InputAccessoryView: UIView {
     
     let textField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Enter message"
+        textField.attributedPlaceholder = NSAttributedString(string: "Enter message", attributes: [NSAttributedString.Key.foregroundColor: ThemeManager.currentTheme().subtitleTextColor])
+        textField.textColor = ThemeManager.currentTheme().titleTextColor
         return textField
     }()
     
     let separatorView: UIView = {
         let separatorView = UIView()
-        separatorView.backgroundColor = .lightGray
+        separatorView.backgroundColor = ThemeManager.currentTheme().subtitleTextColor
         return separatorView
     }()
     
@@ -41,7 +42,7 @@ class InputAccessoryView: UIView {
         super.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: height ?? 48))
         
         self.delegate = delegate
-        self.backgroundColor = .white
+        self.backgroundColor = ThemeManager.currentTheme().backgroundColor
         
         setupViews()
     }

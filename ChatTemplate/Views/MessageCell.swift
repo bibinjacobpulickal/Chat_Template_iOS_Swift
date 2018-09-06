@@ -17,7 +17,9 @@ class MessageCell: UITableViewCell {
             timeLabel.text = messageViewModel?.time
             messageLabel.text = messageViewModel?.text
             if let isIncoming = messageViewModel?.isIncoming {
-                containerView.backgroundColor = isIncoming ? .white : .green
+                let incomingColor = ThemeManager.currentTheme().backgroundColor
+                let outGoingColor = ThemeManager.currentTheme().secondaryColor
+                containerView.backgroundColor = isIncoming ? incomingColor : outGoingColor
                 setLeadingOrTrailingConstraint(isIncoming: isIncoming)
             }
         }
@@ -36,12 +38,14 @@ class MessageCell: UITableViewCell {
         let label = UILabel()
         label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 16)
+        label.textColor = ThemeManager.currentTheme().titleTextColor
         return label
     }()
     
     let timeLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 12)
+        label.textColor = ThemeManager.currentTheme().subtitleTextColor
         return label
     }()
     

@@ -50,26 +50,26 @@ enum Theme: Int {
     var secondaryColor: UIColor {
         switch self {
         case .light:
-            return .white
+            return .green
         case .dark:
-            return .black
+            return .purple
         }
     }
     
     var titleTextColor: UIColor {
         switch self {
         case .light:
-            return .white
-        case .dark:
             return .black
+        case .dark:
+            return .white
         }
     }
     var subtitleTextColor: UIColor {
         switch self {
         case .light:
-            return .white
+            return .darkGray
         case .dark:
-            return .black
+            return .lightGray
         }
     }
 }

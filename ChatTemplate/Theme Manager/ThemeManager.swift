@@ -29,6 +29,7 @@ class ThemeManager {
         sharedApplication.delegate?.window??.tintColor = theme.mainColor
         
         UINavigationBar.appearance().barStyle = theme.barStyle
+        UINavigationBar.appearance().tintColor = theme.titleTextColor
         UINavigationBar.appearance().setBackgroundImage(theme.navigationBackgroundImage, for: .default)
         UINavigationBar.appearance().backIndicatorImage = UIImage(named: "backArrow")
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "backArrowMaskFixed")

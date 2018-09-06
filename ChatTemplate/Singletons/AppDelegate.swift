@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.rootViewController = UINavigationController(rootViewController: MessagesController())
         
+        ThemeManager.applyTheme(theme: .dark)
         return true
     }
 }

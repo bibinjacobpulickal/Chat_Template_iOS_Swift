@@ -21,6 +21,7 @@ class MessagesController: UITableViewController {
         
         setupNavigationBar()
         
+        tableView.backgroundColor = ThemeManager.currentTheme().backgroundColor
         tableView.register(UserCell.self, forCellReuseIdentifier: reuseIdentifier)
     }
     
