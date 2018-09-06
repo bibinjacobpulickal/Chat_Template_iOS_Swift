@@ -15,13 +15,12 @@ enum Theme: Int {
     var mainColor: UIColor {
         switch self {
         case .light:
-            return UIColor(argb: "ffffff")
+            return .white
         case .dark:
-            return UIColor(argb: "000000")
+            return .black
         }
     }
     
-    //Customizing the Navigation Bar
     var barStyle: UIBarStyle {
         switch self {
         case .light:
@@ -42,35 +41,35 @@ enum Theme: Int {
     var backgroundColor: UIColor {
         switch self {
         case .light:
-            return UIColor(argb: "ffffff")
+            return .white
         case .dark:
-            return UIColor(argb: "000000")
+            return .black
         }
     }
     
     var secondaryColor: UIColor {
         switch self {
         case .light:
-            return UIColor(argb: "ffffff")
+            return .white
         case .dark:
-            return UIColor(argb: "000000")
+            return .black
         }
     }
     
     var titleTextColor: UIColor {
         switch self {
         case .light:
-            return UIColor(argb: "ffffff")
+            return .white
         case .dark:
-            return UIColor(argb: "000000")
+            return .black
         }
     }
     var subtitleTextColor: UIColor {
         switch self {
         case .light:
-            return UIColor(argb: "ffffff")
+            return .white
         case .dark:
-            return UIColor(argb: "000000")
+            return .black
         }
     }
 }

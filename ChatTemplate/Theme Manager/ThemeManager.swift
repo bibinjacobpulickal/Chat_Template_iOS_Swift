@@ -8,13 +8,10 @@
 
 import UIKit
 
-// Enum declaration
-let SelectedThemeKey = "SelectedTheme"
-
-// This will let you use a theme in the app.
 class ThemeManager {
     
-    // ThemeManager
+    static let SelectedThemeKey = "SelectedTheme"
+    
     static func currentTheme() -> Theme {
         if let storedTheme = (UserDefaults.standard.value(forKey: SelectedThemeKey) as AnyObject).integerValue {
             return Theme(rawValue: storedTheme)!
@@ -24,11 +21,10 @@ class ThemeManager {
     }
     
     static func applyTheme(theme: Theme) {
-        // First persist the selected theme using NSUserDefaults.
+        
         UserDefaults.standard.setValue(theme.rawValue, forKey: SelectedThemeKey)
         UserDefaults.standard.synchronize()
         
-        // You get your current (selected) theme and apply the main color to the tintColor property of your application’s window.
         let sharedApplication = UIApplication.shared
         sharedApplication.delegate?.window??.tintColor = theme.mainColor
         
