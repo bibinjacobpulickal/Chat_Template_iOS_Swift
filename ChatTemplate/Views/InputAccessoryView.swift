@@ -18,6 +18,7 @@ class InputAccessoryView: UIView {
     
     let textField: UITextField = {
         let textField = UITextField()
+        textField.keyboardAppearance = ThemeManager.current == .light ? .default : .dark
         textField.attributedPlaceholder = NSAttributedString(string: "Enter message", attributes: [NSAttributedString.Key.foregroundColor: ThemeManager.current.invertedSubtitleTextColor])
         textField.textColor = ThemeManager.current.titleTextColor
         return textField
