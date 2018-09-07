@@ -15,8 +15,8 @@ class ChatLogHeaderView: UIView {
     let dateLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.textColor = ThemeManager.currentTheme().subtitleTextColor
-        label.backgroundColor = ThemeManager.currentTheme() == .light ? .yellow : .brown
+        label.textColor = ThemeManager.current.subtitleTextColor
+        label.backgroundColor = ThemeManager.current == .light ? .yellow : .brown
         label.layer.cornerRadius = 8
         label.layer.masksToBounds = true
         return label

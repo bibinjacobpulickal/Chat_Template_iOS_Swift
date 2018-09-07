@@ -42,7 +42,7 @@ class ChatLogController: UITableViewController {
         tableView.separatorStyle = .none
         tableView.allowsSelection = false
         tableView.keyboardDismissMode = .interactive
-        tableView.backgroundColor = ThemeManager.currentTheme() == .light ? UIColor(white: 0.95, alpha: 1) : UIColor(white: 0.05, alpha: 1)
+        tableView.backgroundColor = ThemeManager.current == .light ? UIColor(white: 0.95, alpha: 1) : UIColor(white: 0.05, alpha: 1)
         tableView.contentInset = UIEdgeInsets(top: 8, bottom: 8)
         tableView.register(MessageCell.self, forCellReuseIdentifier: reuseIdentifier)
     }

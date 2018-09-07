@@ -72,4 +72,12 @@ enum Theme: Int {
             return .lightGray
         }
     }
+    var invertedSubtitleTextColor: UIColor {
+        switch self {
+        case .light:
+            return .lightGray
+        case .dark:
+            return .darkGray
+        }
+    }
 }

@@ -22,13 +22,13 @@ class NavigationBarView: UIButton {
     let nameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 20)
-        label.textColor = ThemeManager.currentTheme().titleTextColor
+        label.textColor = ThemeManager.current.titleTextColor
         return label
     }()
     
     let statusLabel: UILabel = {
         let label = UILabel()
-        label.textColor = ThemeManager.currentTheme().subtitleTextColor
+        label.textColor = ThemeManager.current.subtitleTextColor
         label.font = UIFont.systemFont(ofSize: 12)
         return label
     }()

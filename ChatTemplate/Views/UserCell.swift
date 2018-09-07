@@ -39,20 +39,20 @@ class UserCell: UITableViewCell {
     let nameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 18)
-        label.textColor = ThemeManager.currentTheme().titleTextColor
+        label.textColor = ThemeManager.current.titleTextColor
         return label
     }()
     
     let detailLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
-        label.textColor = ThemeManager.currentTheme().subtitleTextColor
+        label.textColor = ThemeManager.current.subtitleTextColor
         return label
     }()
     
     let timeLabel: UILabel = {
         let label = UILabel()
-        label.textColor = ThemeManager.currentTheme().subtitleTextColor
+        label.textColor = ThemeManager.current.subtitleTextColor
         label.textAlignment = .right
         label.font = UIFont.systemFont(ofSize: 12)
         return label
@@ -81,7 +81,7 @@ class UserCell: UITableViewCell {
     private func setupViews() {
         
         separatorInset = UIEdgeInsets(left: 96)
-        backgroundColor = ThemeManager.currentTheme().backgroundColor
+        backgroundColor = ThemeManager.current.backgroundColor
         
         addView(profileImageView, anchors: [.top, .bottom, .leading], padding: UIEdgeInsets(top: 4, leading: 16, bottom: 4), size: CGSize(width: 64, height: 64))
         

@@ -18,10 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow()
         window?.makeKeyAndVisible()
-        
         window?.rootViewController = UINavigationController(rootViewController: MessagesController())
         
         ThemeManager.applyTheme(theme: .dark)
+        
         return true
     }
 }
