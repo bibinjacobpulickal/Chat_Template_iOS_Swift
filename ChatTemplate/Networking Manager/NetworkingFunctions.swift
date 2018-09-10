@@ -26,11 +26,7 @@ func session<T: Decodable>(with request: URLRequest, handle: Bool = false, compl
     
     URLSession.shared.dataTask(with: request) { (data, response, error) in
         
-        if handle {
-            handleSession(request, response, error, completion: { (response: Response<T>) in
-                completion(response)
-            })
-        } else if error != nil {
+        if handle || error != nil {
             handleSession(request, response, error, completion: { (response: Response<T>) in
                 completion(response)
             })
