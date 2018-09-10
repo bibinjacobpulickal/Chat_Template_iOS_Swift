@@ -98,16 +98,11 @@
 		DB21031621381C83009939F4 /* ChatTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				DB21032A21381CEB009939F4 /* Singletons */,
+				DBBAF6B02146373000350247 /* Chat Module */,
 				DBC78FC4214197DB00FA1D54 /* Theme Manager */,
 				DBC78FB421410E5700FA1D54 /* Networking Manager */,
 				DBC78FB321410C1E00FA1D54 /* Auto Layout Manager */,
-				DBC78FA8213EF77D00FA1D54 /* Protocols */,
-				DB21032A21381CEB009939F4 /* Singletons */,
-				DB21033421381DF7009939F4 /* Models */,
-				DB21033721381E3E009939F4 /* ViewModels */,
-				DB21033621381E34009939F4 /* Views */,
-				DB21033821381E46009939F4 /* Controllers */,
-				DBBAF6AD21462F9100350247 /* Helpers */,
 				DB21032921381CBB009939F4 /* Supporting FIles */,
 			);
 			path = ChatTemplate;
@@ -174,6 +169,19 @@
 				DBBAF6AE2146339300350247 /* DateExtensions.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		DBBAF6B02146373000350247 /* Chat Module */ = {
+			isa = PBXGroup;
+			children = (
+				DBC78FA8213EF77D00FA1D54 /* Protocols */,
+				DB21033421381DF7009939F4 /* Models */,
+				DB21033721381E3E009939F4 /* ViewModels */,
+				DB21033621381E34009939F4 /* Views */,
+				DB21033821381E46009939F4 /* Controllers */,
+				DBBAF6AD21462F9100350247 /* Helpers */,
+			);
+			path = "Chat Module";
 			sourceTree = "<group>";
 		};
 		DBC78FA8213EF77D00FA1D54 /* Protocols */ = {
