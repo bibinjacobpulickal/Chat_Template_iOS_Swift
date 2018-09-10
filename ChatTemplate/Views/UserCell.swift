@@ -15,7 +15,7 @@ class UserCell: UITableViewCell {
     var userViewModel: UserViewModel? {
         didSet {
             nameLabel.text = userViewModel?.name
-            timeLabel.text = userViewModel?.lastMessageTime
+            timeLabel.text = userViewModel?.lastMessageTimeAgo
             if Bool.random() {
                 messageCountLabel.isHidden = true
             } else {

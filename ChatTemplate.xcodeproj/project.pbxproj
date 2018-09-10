@@ -20,6 +20,7 @@
 		DB21035421381EA5009939F4 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB21035021381EA5009939F4 /* UserCell.swift */; };
 		DB21035521381EA5009939F4 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB21035121381EA5009939F4 /* NavigationBarView.swift */; };
 		DB21035621381EA5009939F4 /* InputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB21035221381EA5009939F4 /* InputAccessoryView.swift */; };
+		DBBAF6AF2146339300350247 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBAF6AE2146339300350247 /* DateExtensions.swift */; };
 		DBC78FA7213E6B0200FA1D54 /* ChatLogHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC78FA6213E6B0200FA1D54 /* ChatLogHeaderView.swift */; };
 		DBC78FAA213EF7D100FA1D54 /* InputAccessoryViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC78FA9213EF7D100FA1D54 /* InputAccessoryViewDelegate.swift */; };
 		DBC78FAC2140F33500FA1D54 /* LayoutAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC78FAB2140F33500FA1D54 /* LayoutAnchors.swift */; };
@@ -51,6 +52,7 @@
 		DB21035021381EA5009939F4 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		DB21035121381EA5009939F4 /* NavigationBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		DB21035221381EA5009939F4 /* InputAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputAccessoryView.swift; sourceTree = "<group>"; };
+		DBBAF6AE2146339300350247 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		DBC78FA6213E6B0200FA1D54 /* ChatLogHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogHeaderView.swift; sourceTree = "<group>"; };
 		DBC78FA9213EF7D100FA1D54 /* InputAccessoryViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputAccessoryViewDelegate.swift; sourceTree = "<group>"; };
 		DBC78FAB2140F33500FA1D54 /* LayoutAnchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAnchors.swift; sourceTree = "<group>"; };
@@ -105,7 +107,7 @@
 				DB21033721381E3E009939F4 /* ViewModels */,
 				DB21033621381E34009939F4 /* Views */,
 				DB21033821381E46009939F4 /* Controllers */,
-				DB21033521381E27009939F4 /* Helpers */,
+				DBBAF6AD21462F9100350247 /* Helpers */,
 				DB21032921381CBB009939F4 /* Supporting FIles */,
 			);
 			path = ChatTemplate;
@@ -136,13 +138,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		DB21033521381E27009939F4 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		DB21033621381E34009939F4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +166,14 @@
 				DB21033B21381E5C009939F4 /* ChatLogController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DBBAF6AD21462F9100350247 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DBBAF6AE2146339300350247 /* DateExtensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		DBC78FA8213EF77D00FA1D54 /* Protocols */ = {
@@ -309,6 +312,7 @@
 				DBC78FA7213E6B0200FA1D54 /* ChatLogHeaderView.swift in Sources */,
 				DBC78FC02141113200FA1D54 /* CodableExtensions.swift in Sources */,
 				DBC78FC22141135500FA1D54 /* NetworkingFunctions.swift in Sources */,
+				DBBAF6AF2146339300350247 /* DateExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

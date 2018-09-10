@@ -14,5 +14,5 @@ struct UserViewModel {
     var lastMessage: String?
     var profileImageUrl: String?
     var newMessageCount: String?
-    var lastMessageTime: String?
+    var lastMessageTimeAgo: String?
 }
