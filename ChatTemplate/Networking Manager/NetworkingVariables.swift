@@ -9,6 +9,7 @@
 import Foundation
 
 typealias Header = [String: String?]?
+typealias NonDecodableResponse = Response<NonDecodable>
 
 enum Response<T: Codable> {
     
@@ -69,4 +70,8 @@ enum Expected<T: Decodable>: Decodable {
             }
         }
     }
+}
+
+struct NonDecodable: Codable {
+    var nonDecodable: String
 }

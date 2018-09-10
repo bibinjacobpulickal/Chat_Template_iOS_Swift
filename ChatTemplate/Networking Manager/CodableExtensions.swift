@@ -8,10 +8,6 @@
 
 import Foundation
 
-struct NonDecodable: Codable {
-    var nonDecodable: String
-}
-
 protocol AnyDecoder {
     func decode<T: Decodable>(_ type: T.Type, from data: Data) throws -> T
 }
