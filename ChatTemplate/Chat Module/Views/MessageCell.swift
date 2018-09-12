@@ -27,27 +27,21 @@ class MessageCell: UITableViewCell {
     
     // MARK: - Views
     
-    let containerView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .green
-        view.layer.cornerRadius = 8
-        return view
-    }()
+    let containerView: UIView = create {
+        $0.backgroundColor = .green
+        $0.layer.cornerRadius = 8
+    }
     
-    let messageLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.font = UIFont.systemFont(ofSize: 16)
-        label.textColor = ThemeManager.current.titleTextColor
-        return label
-    }()
+    let messageLabel: UILabel = create {
+        $0.numberOfLines = 0
+        $0.font = UIFont.systemFont(ofSize: 16)
+        $0.textColor = ThemeManager.current.titleTextColor
+    }
     
-    let timeLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 12)
-        label.textColor = ThemeManager.current.subtitleTextColor
-        return label
-    }()
+    let timeLabel: UILabel = create {
+        $0.font = UIFont.systemFont(ofSize: 12)
+        $0.textColor = ThemeManager.current.subtitleTextColor
+    }
     
     // MARK: - Initializers
     

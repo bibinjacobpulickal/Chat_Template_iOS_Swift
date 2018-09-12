@@ -16,26 +16,20 @@ class InputAccessoryView: UIView {
     
     // MARK: - Views
     
-    let textField: UITextField = {
-        let textField = UITextField()
-        textField.keyboardAppearance = ThemeManager.current == .light ? .default : .dark
-        textField.attributedPlaceholder = NSAttributedString(string: "Enter message", attributes: [NSAttributedString.Key.foregroundColor: ThemeManager.current.invertedSubtitleTextColor])
-        textField.textColor = ThemeManager.current.titleTextColor
-        return textField
-    }()
+    let textField: UITextField = create {
+        $0.keyboardAppearance = ThemeManager.current == .light ? .default : .dark
+        $0.attributedPlaceholder = NSAttributedString(string: "Enter message", attributes: [NSAttributedString.Key.foregroundColor: ThemeManager.current.invertedSubtitleTextColor])
+        $0.textColor = ThemeManager.current.titleTextColor
+    }
     
-    let separatorView: UIView = {
-        let separatorView = UIView()
-        separatorView.backgroundColor = ThemeManager.current.invertedSubtitleTextColor
-        return separatorView
-    }()
+    let separatorView: UIView = create {
+        $0.backgroundColor = ThemeManager.current.invertedSubtitleTextColor
+    }
     
-    let sendButton: UIButton = {
-        let sendButton = UIButton(type: .system)
-        sendButton.setTitle("Send", for: .normal)
-        sendButton.addTarget(self, action: #selector(handleSend), for: .touchUpInside)
-        return sendButton
-    }()
+    let sendButton: UIButton = create {
+        $0.setTitle("Send", for: .normal)
+        $0.addTarget(self, action: #selector(handleSend), for: .touchUpInside)
+    }
     
     // MARK: - Initializers
     

@@ -12,26 +12,20 @@ class NavigationBarView: UIButton {
     
     // MARK: - Views
     
-    let profileImageView: UIImageView = {
-        let iv = UIImageView()
-        iv.layer.cornerRadius = 20
-        iv.layer.masksToBounds = true
-        return iv
-    }()
+    let profileImageView: UIImageView = create {
+        $0.layer.cornerRadius = 20
+        $0.layer.masksToBounds = true
+    }
     
-    let nameLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 20)
-        label.textColor = ThemeManager.current.titleTextColor
-        return label
-    }()
+    let nameLabel: UILabel = create {
+        $0.font = UIFont.boldSystemFont(ofSize: 20)
+        $0.textColor = ThemeManager.current.titleTextColor
+    }
     
-    let statusLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = ThemeManager.current.subtitleTextColor
-        label.font = UIFont.systemFont(ofSize: 12)
-        return label
-    }()
+    let statusLabel: UILabel = create {
+        $0.textColor = ThemeManager.current.subtitleTextColor
+        $0.font = UIFont.systemFont(ofSize: 12)
+    }
     
     // MARK: - Initializers
     

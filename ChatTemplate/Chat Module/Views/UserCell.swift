@@ -29,44 +29,34 @@ class UserCell: UITableViewCell {
     
     // MARK: - Views
     
-    let profileImageView: UIImageView = {
-        let iv = UIImageView()
-        iv.layer.cornerRadius = 32
-        iv.layer.masksToBounds = true
-        return iv
-    }()
+    let profileImageView: UIImageView = create {
+        $0.layer.cornerRadius = 32
+        $0.layer.masksToBounds = true
+    }
     
-    let nameLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 18)
-        label.textColor = ThemeManager.current.titleTextColor
-        return label
-    }()
+    let nameLabel: UILabel = create {
+        $0.font = UIFont.boldSystemFont(ofSize: 18)
+        $0.textColor = ThemeManager.current.titleTextColor
+    }
     
-    let detailLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 14)
-        label.textColor = ThemeManager.current.subtitleTextColor
-        return label
-    }()
+    let detailLabel: UILabel = create {
+        $0.font = UIFont.systemFont(ofSize: 14)
+        $0.textColor = ThemeManager.current.subtitleTextColor
+    }
     
-    let timeLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = ThemeManager.current.subtitleTextColor
-        label.textAlignment = .right
-        label.font = UIFont.systemFont(ofSize: 12)
-        return label
-    }()
+    let timeLabel: UILabel = create {
+        $0.textColor = ThemeManager.current.subtitleTextColor
+        $0.textAlignment = .right
+        $0.font = UIFont.systemFont(ofSize: 12)
+    }
     
-    let messageCountLabel: UILabel = {
-        let label = UILabel()
-        label.backgroundColor = .green
-        label.textColor = .white
-        label.textAlignment = .center
-        label.layer.cornerRadius = 12
-        label.layer.masksToBounds = true
-        return label
-    }()
+    let messageCountLabel: UILabel = create {
+        $0.backgroundColor = .green
+        $0.textColor = .white
+        $0.textAlignment = .center
+        $0.layer.cornerRadius = 12
+        $0.layer.masksToBounds = true
+    }
     
     // MARK: - Initializers
     
@@ -85,7 +75,7 @@ class UserCell: UITableViewCell {
         
         addView(profileImageView, anchors: [.top, .bottom, .leading], padding: UIEdgeInsets(top: 4, leading: 16, bottom: 4), size: CGSize(width: 64, height: 64))
         
-        addView(timeLabel, anchors: [.top, .trailing], padding: UIEdgeInsets(top: 10, trailing: 8), size: CGSize(width: 100, height: 20))
+        addView(timeLabel, anchors: [.top, .trailing], padding: UIEdgeInsets(top: 10, trailing: 8), size: CGSize(height: 20))
         
         addView(nameLabel, top: topAnchor, leading: profileImageView.trailingAnchor, trailing: timeLabel.leadingAnchor, padding: UIEdgeInsets(top: 10, leading: 16, trailing: 8), size: CGSize(height: 20))
         

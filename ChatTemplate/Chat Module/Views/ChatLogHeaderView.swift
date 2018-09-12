@@ -12,15 +12,13 @@ class ChatLogHeaderView: UIView {
     
     // MARK: - Views
     
-    let dateLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        label.textColor = ThemeManager.current.subtitleTextColor
-        label.backgroundColor = ThemeManager.current == .light ? .yellow : .brown
-        label.layer.cornerRadius = 8
-        label.layer.masksToBounds = true
-        return label
-    }()
+    let dateLabel: UILabel = create {
+        $0.textAlignment = .center
+        $0.textColor = ThemeManager.current.subtitleTextColor
+        $0.backgroundColor = ThemeManager.current == .light ? .yellow : .brown
+        $0.layer.cornerRadius = 8
+        $0.layer.masksToBounds = true
+    }
     
     init(date: Date = Date()) {
         super.init(frame: .zero)

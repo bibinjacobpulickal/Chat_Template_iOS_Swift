@@ -63,4 +63,8 @@ extension UIView {
     }
 }
 
-
+func create<T>(_ setup: ((T) -> Void)) -> T where T: NSObject {
+    let object = T()
+    setup(object)
+    return object
+}
