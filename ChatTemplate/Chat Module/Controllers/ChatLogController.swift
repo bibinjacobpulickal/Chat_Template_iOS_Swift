@@ -42,15 +42,30 @@ class ChatLogController: UITableViewController {
         tableView.separatorStyle = .none
         tableView.allowsSelection = false
         tableView.keyboardDismissMode = .interactive
-        tableView.backgroundColor = ThemeManager.current == .light ? UIColor(white: 0.95, alpha: 1) : UIColor(white: 0.05, alpha: 1)
         tableView.contentInset = UIEdgeInsets(top: 8, bottom: 8)
+        tableView.backgroundColor = ThemeManager.current.backgroundColor
         tableView.register(MessageCell.self, forCellReuseIdentifier: reuseIdentifier)
     }
     
     // MARK: - Table View Functions
     
-    private func addKeyboardObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(scrollToEnd), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+    private func groupMessagesByDate(messages: Array<Any>) {
+        var groupedMessages = [Date: Array<Any>]()
+        messages.forEach { (message) in
+            groupedMessages = Dictionary(grouping: messages, by: { (message) -> Date in
+                return Date()
+            })
+        }
+        sortGroupedMessages(groupedMessages: groupedMessages)
+    }
+    
+    private func sortGroupedMessages(groupedMessages: [Date: Array<Any>]) {
+        var sortedGroupedMessages = [[Any]]()
+        let sortedKeys = groupedMessages.keys.sorted()
+        sortedKeys.forEach { (key) in
+            sortedGroupedMessages.append(groupedMessages[key] ?? [])
+        }
+        reloadAndScrollToEnd()
     }
     
     private func reloadAndScrollToEnd() {
@@ -73,6 +88,10 @@ class ChatLogController: UITableViewController {
     }
     
     // MARK: - Setup Keyboard
+    
+    private func addKeyboardObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(scrollToEnd), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+    }
     
     lazy var inputContainerView = InputAccessoryView(delegate: self, height: tabBarController?.tabBar.frame.height)
     
