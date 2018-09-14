@@ -20,12 +20,15 @@ class MessagesController: UITableViewController {
         super.viewDidLoad()
         
         setupNavigationBar()
-        
-        tableView.backgroundColor = ThemeManager.current.backgroundColor
-        tableView.register(UserCell.self, forCellReuseIdentifier: reuseIdentifier)
+        setupTableView()
     }
     
     // MARK: - Setup Views
+    
+    private func setupTableView() {
+        tableView.backgroundColor = ThemeManager.current.backgroundColor
+        tableView.register(UserCell.self, forCellReuseIdentifier: reuseIdentifier)
+    }
     
     private func setupNavigationBar() {
         navigationItem.title = "Messages"

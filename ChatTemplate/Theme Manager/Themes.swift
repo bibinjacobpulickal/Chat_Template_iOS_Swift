@@ -41,9 +41,9 @@ enum Theme: Int {
     var backgroundColor: UIColor {
         switch self {
         case .light:
-            return .white
+            return UIColor(white: 0.95, alpha: 1)
         case .dark:
-            return .black
+            return UIColor(white: 0.05, alpha: 1)
         }
     }
     
