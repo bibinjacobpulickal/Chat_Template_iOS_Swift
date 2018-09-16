@@ -29,7 +29,7 @@ extension UIImageView {
         URLSession.shared.dataTask(with: url, completionHandler: { (data, _, error) in
             
             if let error = error {
-                print(error.localizedDescription)
+                logSession(URLRequest(url: url), data, nil, error)
                 return
             }
             guard let imageData = data, let downloadedImage = UIImage(data: imageData) else { return }

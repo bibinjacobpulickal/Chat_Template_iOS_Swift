@@ -1,5 +1,5 @@
 //
-//  NetworkingVariables.swift
+//  NetworkVariables.swift
 //  ChatTemplate
 //
 //  Created by Bibin Jacob Pulickal on 06/09/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias Header = [String: String?]?
+typealias HTTPHeader = [String: String?]?
 typealias NonDecodableResponse = Response<NonDecodable>
 
 enum Response<T: Codable> {

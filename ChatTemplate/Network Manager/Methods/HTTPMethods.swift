@@ -1,5 +1,5 @@
 //
-//  NetworkingMethods.swift
+//  HTTPMethods.swift
 //  ChatTemplate
 //
 //  Created by Bibin Jacob Pulickal on 30/07/18.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-enum Method: String {
-    case get = "GET"
-    case put = "PUT"
-    case post = "POST"
-    case head = "HEAD"
-    case trace = "TRACE"
+enum HTTPMethod: String {
+    case get    = "GET"
+    case put    = "PUT"
+    case post   = "POST"
+    case head   = "HEAD"
+    case trace  = "TRACE"
     case delete = "DELETE"
     case options = "OPTIONS"
     case connect = "CONNECT"
