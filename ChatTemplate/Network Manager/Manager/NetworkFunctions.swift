@@ -8,7 +8,14 @@
 
 import Foundation
 
-func session<T: Decodable>(url: String, method: HTTPMethod = .get, data: Data? = nil, object: Any? = nil, encoding: HTTPEncoding, headers: HTTPHeader = [:], log: Bool = false, completion: @escaping (Response<T>) -> Void) {
+func session<T: Decodable>(api: API, data: Data? = nil, object: Any? = nil, log: Bool = false, completion: @escaping (Response<T>) -> Void) {
+    
+    session(url: api.urlString, method: api.method, data: data, object: object, encoding: api.encoding, headers: api.headers, log: log) { (response: Response<T>) in
+            completion(response)
+    }
+}
+
+func session<T: Decodable>(url: String, method: HTTPMethod = .get, data: Data? = nil, object: Any? = nil, encoding: HTTPEncoding? = .json, headers: HTTPHeader = [:], log: Bool = false, completion: @escaping (Response<T>) -> Void) {
     
     do {
         let request = try URLRequest(url: url, method: method, data: data, object: object, encoding: encoding, headers: headers)

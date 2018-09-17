@@ -10,7 +10,7 @@ import Foundation
 
 extension URLRequest {
     
-    init(url: String, method: HTTPMethod = .get, data: Data? = nil, object: Any? = nil, encoding: HTTPEncoding = .json, headers: HTTPHeader = [:]) throws {
+    init(url: String, method: HTTPMethod = .get, data: Data? = nil, object: Any? = nil, encoding: HTTPEncoding? = .json, headers: HTTPHeader = [:]) throws {
         
         guard let url = URL(string: url) else {
             throw URLError(.badURL)
@@ -28,7 +28,7 @@ extension URLRequest {
         if let data = data {
             self.httpBody = data
         } else if let object = object {
-            try encode(request: &self, object: object, encoding: encoding)
+            try encode(request: &self, object: object, encoding: encoding ?? .json)
         }
     }
 }
