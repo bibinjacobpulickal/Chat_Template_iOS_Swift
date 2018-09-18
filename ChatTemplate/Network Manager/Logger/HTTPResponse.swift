@@ -30,6 +30,7 @@ enum SessionResponse: String, Error {
     case unavailable    = "Service Unavailable"
     case gatewayTimeout = "Gateway Timeout"
     case emptyData      = "Empty Data"
+    case decodeError    = "Decoding Failed"
 }
 
 func logResponse(_ response: HTTPURLResponse) {

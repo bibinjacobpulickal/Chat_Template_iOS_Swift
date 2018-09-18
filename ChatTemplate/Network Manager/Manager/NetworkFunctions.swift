@@ -52,13 +52,11 @@ func object<T: Decodable>(from data: Data?, completion: @escaping (Response<T>) 
         completion(.failed(SessionResponse.emptyData))
         return
     }
-    
-    do {
-        let object = try JSONDecoder().decode(T.self, from: data)
+    if let object = try? JSONDecoder().decode(T.self, from: data) {
         completion(.decoded(object))
-        let json = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+    } else if let json = try? JSONSerialization.jsonObject(with: data, options: .mutableLeaves) {
         completion(.serialized(json))
-    } catch {
-        completion(.failed(error))
+    } else {
+        completion(.failed(SessionResponse.decodeError))
     }
 }
