@@ -39,10 +39,30 @@ class MessagesController: UITableViewController {
     // MARK: - Table View Delegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        showChatLogController()
+        if let cell = tableView.cellForRow(at: indexPath) as? UserCell {
+            set(theme: ThemeManager.inverted, for: cell)
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) as? UserCell {
+            set(theme: ThemeManager.current, for: cell)
+        }
+    }
+    
+    private func showChatLogController() {
         let chatLogController = ChatLogController()
         chatLogController.userViewModel = randomUserViewModel
         let chatNavigationController = UINavigationController(rootViewController: chatLogController)
         navigationController?.splitViewController?.showDetailViewController(chatNavigationController, sender: nil)
+    }
+    
+    private func set(theme: Theme, for cell: UserCell) {
+        cell.nameLabel.textColor = theme.titleTextColor
+        cell.timeLabel.textColor = theme.subtitleTextColor
+        cell.detailLabel.textColor = theme.subtitleTextColor
+        cell.messageCountLabel.backgroundColor = .green
     }
     
     // MARK: - Table View Data Source

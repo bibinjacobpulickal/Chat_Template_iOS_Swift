@@ -16,6 +16,10 @@ class ThemeManager {
         return Theme(rawValue: UserDefaults.standard.integer(forKey: selectedThemeKey)) ?? .light
     }
     
+    static var inverted: Theme {
+        return Theme(rawValue: UserDefaults.standard.integer(forKey: selectedThemeKey)) == .light ? .dark : .light
+    }
+    
     static func applyTheme(theme: Theme) {
         
         setUserDefaults(theme)
