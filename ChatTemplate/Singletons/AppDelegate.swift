@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow()
         window?.makeKeyAndVisible()
-        window?.rootViewController = UINavigationController(rootViewController: MessagesController())
+        window?.rootViewController = SplitViewController()
         
         ThemeManager.applyTheme(theme: .dark)
         

@@ -41,7 +41,8 @@ class MessagesController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let chatLogController = ChatLogController()
         chatLogController.userViewModel = randomUserViewModel
-        navigationController?.pushViewController(chatLogController, animated: true)
+        let chatNavigationController = UINavigationController(rootViewController: chatLogController)
+        navigationController?.splitViewController?.showDetailViewController(chatNavigationController, sender: nil)
     }
     
     // MARK: - Table View Data Source

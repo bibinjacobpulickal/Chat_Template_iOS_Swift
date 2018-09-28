@@ -40,6 +40,7 @@
 		DBC78FC6214197FB00FA1D54 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC78FC5214197FB00FA1D54 /* ThemeManager.swift */; };
 		DBC78FC82141984B00FA1D54 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC78FC72141984B00FA1D54 /* UIColorExtension.swift */; };
 		DBC78FCA214199F800FA1D54 /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC78FC9214199F800FA1D54 /* Themes.swift */; };
+		DBF82213215E557C0019392F /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF82212215E557C0019392F /* SplitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		DBC78FC5214197FB00FA1D54 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		DBC78FC72141984B00FA1D54 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		DBC78FC9214199F800FA1D54 /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
+		DBF82212215E557C0019392F /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 		DB21033821381E46009939F4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DBF82212215E557C0019392F /* SplitViewController.swift */,
 				DB21033A21381E5C009939F4 /* MessagesController.swift */,
 				DB21033B21381E5C009939F4 /* ChatLogController.swift */,
 			);
@@ -363,6 +366,7 @@
 			files = (
 				DBC78FC6214197FB00FA1D54 /* ThemeManager.swift in Sources */,
 				DBC78FB82141106000FA1D54 /* HTTPMethods.swift in Sources */,
+				DBF82213215E557C0019392F /* SplitViewController.swift in Sources */,
 				DBC78FAA213EF7D100FA1D54 /* InputAccessoryViewDelegate.swift in Sources */,
 				DBC78FAC2140F33500FA1D54 /* LayoutAnchors.swift in Sources */,
 				DB21033E21381E5C009939F4 /* ChatLogController.swift in Sources */,

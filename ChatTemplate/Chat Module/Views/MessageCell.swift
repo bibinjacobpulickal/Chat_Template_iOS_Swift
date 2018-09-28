@@ -20,7 +20,7 @@ class MessageCell: UITableViewCell {
                 let incomingColor = ThemeManager.current.mainColor
                 let outGoingColor = ThemeManager.current.secondaryColor
                 containerView.backgroundColor = isIncoming ? incomingColor : outGoingColor
-                setLeadingOrTrailingConstraint(isIncoming: isIncoming)
+                setMessageLabelConstraints(isIncoming: isIncoming)
             }
         }
     }
@@ -60,11 +60,6 @@ class MessageCell: UITableViewCell {
         addView(messageLabel, anchors: [.top, .bottom], padding: UIEdgeInsets(top: 16, bottom: 36))
         addView(timeLabel, anchors: [.bottom], top: messageLabel.bottomAnchor, trailing: messageLabel.trailingAnchor, padding: UIEdgeInsets(top: 4, bottom: 20), size: CGSize(height: 12))
         
-        let maximumWidth = UIScreen.main.bounds.width * 2/3
-        let minimumWidth: CGFloat = 52
-        messageLabel.widthAnchor.constraint(greaterThanOrEqualToConstant: minimumWidth).isActive = true
-        messageLabel.widthAnchor.constraint(lessThanOrEqualToConstant: maximumWidth - 32).isActive = true
-        
         containerView.leadingAnchor.constraint(equalTo: messageLabel.leadingAnchor, constant: -8).isActive = true
         containerView.trailingAnchor.constraint(equalTo: messageLabel.trailingAnchor, constant: 8).isActive = true
     }
@@ -72,7 +67,7 @@ class MessageCell: UITableViewCell {
     var leadingAnchorConstraint: NSLayoutConstraint?
     var trailingAnchorConstraint: NSLayoutConstraint?
     
-    private func setLeadingOrTrailingConstraint(isIncoming: Bool) {
+    private func setMessageLabelConstraints(isIncoming: Bool) {
         leadingAnchorConstraint = messageLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32)
         trailingAnchorConstraint = messageLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32)
         if isIncoming {
@@ -82,6 +77,10 @@ class MessageCell: UITableViewCell {
             trailingAnchorConstraint?.isActive = true
             leadingAnchorConstraint?.isActive = false
         }
+        let maximumWidth = bounds.width * 2/3
+        let minimumWidth: CGFloat = 52
+        messageLabel.widthAnchor.constraint(greaterThanOrEqualToConstant: minimumWidth).isActive = true
+        messageLabel.widthAnchor.constraint(lessThanOrEqualToConstant: maximumWidth - 32).isActive = true
     }
     
     // MARK: - Prepare Reuse
