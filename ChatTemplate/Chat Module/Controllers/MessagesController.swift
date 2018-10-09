@@ -40,15 +40,11 @@ class MessagesController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         showChatLogController()
-        if let cell = tableView.cellForRow(at: indexPath) as? UserCell {
-            set(theme: ThemeManager.inverted, for: cell)
-        }
+        setTheme(ThemeManager.inverted, forRowAt: indexPath)
     }
     
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        if let cell = tableView.cellForRow(at: indexPath) as? UserCell {
-            set(theme: ThemeManager.current, for: cell)
-        }
+        setTheme(ThemeManager.current, forRowAt: indexPath)
     }
     
     private func showChatLogController() {
@@ -58,7 +54,8 @@ class MessagesController: UITableViewController {
         navigationController?.splitViewController?.showDetailViewController(chatNavigationController, sender: nil)
     }
     
-    private func set(theme: Theme, for cell: UserCell) {
+    private func setTheme(_ theme: Theme, forRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? UserCell else { return }
         cell.nameLabel.textColor = theme.titleTextColor
         cell.timeLabel.textColor = theme.subtitleTextColor
         cell.detailLabel.textColor = theme.subtitleTextColor
