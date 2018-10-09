@@ -1,8 +1,8 @@
 //
-//  HTTPMethods.swift
-//  ChatTemplate
+//  HTTPMethod.swift
+//  NetworkManager
 //
-//  Created by Bibin Jacob Pulickal on 30/07/18.
+//  Created by Bibin Jacob Pulickal on 09/10/18.
 //  Copyright © 2018 Bibin Jacob Pulickal. All rights reserved.
 //
 

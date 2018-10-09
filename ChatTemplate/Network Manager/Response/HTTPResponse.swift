@@ -1,15 +1,17 @@
 //
-//  NetworkVariables.swift
-//  ChatTemplate
+//  HTTPResponse.swift
+//  NetworkManager
 //
-//  Created by Bibin Jacob Pulickal on 06/09/18.
+//  Created by Bibin Jacob Pulickal on 09/10/18.
 //  Copyright © 2018 Bibin Jacob Pulickal. All rights reserved.
 //
 
 import Foundation
 
-typealias HTTPHeader = [String: String?]?
-typealias NonDecodableResponse = Response<NonDecodable>
+enum HTTPResponse {
+    case success(Data)
+    case failure(Error)
+}
 
 enum Response<T: Codable> {
     
@@ -54,24 +56,4 @@ enum Response<T: Codable> {
             return nil
         }
     }
-}
-
-enum Expected<T: Decodable>: Decodable {
-    case string(String), expected(T)
-    
-    init(from decoder: Decoder) throws {
-        do {
-            self = Expected.expected(try decoder.singleValueContainer().decode(T.self))
-        } catch {
-            do {
-                self = Expected.string(try decoder.singleValueContainer().decode(String.self))
-            } catch {
-                throw DecodingError.typeMismatch(Expected.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Error decoding ID"))
-            }
-        }
-    }
-}
-
-struct NonDecodable: Codable {
-    var nonDecodable: String
 }
