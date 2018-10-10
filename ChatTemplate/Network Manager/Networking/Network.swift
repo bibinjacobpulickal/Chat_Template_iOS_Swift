@@ -50,10 +50,22 @@ class Network {
         guard let url = computeUrl(api: api) else {
             preconditionFailure("Error while computing url")
         }
-        
-        guard let request = computeUrlRequest(api: api, url: url) else {
-            preconditionFailure("Error while computing url request")
+        route(api: api, url: url, log: log) { (response) in
+            completion(response)
         }
+    }
+    
+    func route(string: StaticString, log: Bool = false, completion: @escaping (HTTPResponse) -> Void) {
+        
+        let url = URL(string: string)
+        route(url: url, log: log) { (response) in
+            completion(response)
+        }
+    }
+    
+    func route(api: API? = nil, url: URL, log: Bool = false, completion: @escaping (HTTPResponse) -> Void) {
+        
+        let request = computeUrlRequest(api: api, url: url)
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             

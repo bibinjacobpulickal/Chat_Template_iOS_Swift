@@ -34,6 +34,7 @@
 		DB4560A0216D20B7007543C0 /* CodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB456090216D20B7007543C0 /* CodableExtensions.swift */; };
 		DB4560A1216D20B7007543C0 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB456091216D20B7007543C0 /* UIImageExtensions.swift */; };
 		DB4560A2216D20B7007543C0 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB456093216D20B7007543C0 /* HTTPMethod.swift */; };
+		DB4560A4216DC286007543C0 /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4560A3216DC286007543C0 /* URLExtensions.swift */; };
 		DBBAF6AF2146339300350247 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBAF6AE2146339300350247 /* DateExtensions.swift */; };
 		DBC78FA7213E6B0200FA1D54 /* ChatLogHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC78FA6213E6B0200FA1D54 /* ChatLogHeaderView.swift */; };
 		DBC78FAA213EF7D100FA1D54 /* InputAccessoryViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC78FA9213EF7D100FA1D54 /* InputAccessoryViewDelegate.swift */; };
@@ -76,6 +77,7 @@
 		DB456090216D20B7007543C0 /* CodableExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableExtensions.swift; sourceTree = "<group>"; };
 		DB456091216D20B7007543C0 /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		DB456093216D20B7007543C0 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		DB4560A3216DC286007543C0 /* URLExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtensions.swift; sourceTree = "<group>"; };
 		DBBAF6AE2146339300350247 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		DBC78FA6213E6B0200FA1D54 /* ChatLogHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogHeaderView.swift; sourceTree = "<group>"; };
 		DBC78FA9213EF7D100FA1D54 /* InputAccessoryViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputAccessoryViewDelegate.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 			children = (
 				DB456090216D20B7007543C0 /* CodableExtensions.swift */,
 				DB456091216D20B7007543C0 /* UIImageExtensions.swift */,
+				DB4560A3216DC286007543C0 /* URLExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				DB45609B216D20B7007543C0 /* APIURLRequestComputable.swift in Sources */,
 				DB456099216D20B7007543C0 /* HTTPError.swift in Sources */,
 				DB4560A2216D20B7007543C0 /* HTTPMethod.swift in Sources */,
+				DB4560A4216DC286007543C0 /* URLExtensions.swift in Sources */,
 				DBC78FA7213E6B0200FA1D54 /* ChatLogHeaderView.swift in Sources */,
 				DB456095216D20B7007543C0 /* NetworkProtocols.swift in Sources */,
 				DBBAF6AF2146339300350247 /* DateExtensions.swift in Sources */,

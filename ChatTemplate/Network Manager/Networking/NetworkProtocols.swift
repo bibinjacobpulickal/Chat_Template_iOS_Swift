@@ -10,7 +10,7 @@ import Foundation
 
 protocol NetworkComputable {
     func computeUrl(api: API) -> URL?
-    func computeUrlRequest(api: API, url: URL) -> URLRequest?
+    func computeUrlRequest(api: API?, url: URL) -> URLRequest
 }
 
 protocol NetworkLoggable {

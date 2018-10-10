@@ -24,17 +24,17 @@ extension Network: NetworkComputable {
         return components.url
     }
     
-    func computeUrlRequest(api: API, url: URL) -> URLRequest? {
+    func computeUrlRequest(api: API?, url: URL) -> URLRequest {
         var request = URLRequest(url: url)
-        request.httpMethod = api.method.rawValue
-        if let headers = api.headers {
+        request.httpMethod = api?.method.rawValue
+        if let headers = api?.headers {
             for (key, value) in headers {
                 request.setValue(value, forHTTPHeaderField: key)
             }
         }
-        if let data = api.data {
+        if let data = api?.data {
             request.httpBody = data
-        } else if let object = api.object {
+        } else if let object = api?.object {
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
             request.httpBody = try? JSONSerialization.data(withJSONObject: object, options: .sortedKeys)
         }
