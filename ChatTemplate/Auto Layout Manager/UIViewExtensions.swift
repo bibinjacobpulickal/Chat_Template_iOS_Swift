@@ -10,9 +10,15 @@ import UIKit
 
 extension UIView {
     
-    func addView(_ view: UIView, anchors: [Anchors] = [], anchor: Anchor = .init(), padding: UIEdgeInsets = .zero, size: CGSize = .zero) {
-        
-        addView(view, anchors: anchors, top: anchor.top, leading: anchor.leading, bottom: anchor.bottom, trailing: anchor.trailing, centerX: anchor.centerX, centerY: anchor.centerY, padding: padding, size: size)
+    func addView(_ view: UIView, layout closure: (LayoutProxy) -> Void) {
+        addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layout(using: closure)
+    }
+    
+    func layout(using closure: (LayoutProxy) -> Void) {
+        translatesAutoresizingMaskIntoConstraints = false
+        closure(LayoutProxy(view: self))
     }
     
     func addView(_ view: UIView, anchors: [Anchors] = [], top: NSLayoutYAxisAnchor? = nil, left: NSLayoutXAxisAnchor? = nil, leading: NSLayoutXAxisAnchor? = nil, bottom: NSLayoutYAxisAnchor? = nil, right: NSLayoutXAxisAnchor? = nil, trailing: NSLayoutXAxisAnchor? = nil, centerX: NSLayoutXAxisAnchor? = nil, centerY: NSLayoutYAxisAnchor? = nil, padding: UIEdgeInsets = .zero, size: CGSize = .zero) {
@@ -61,10 +67,4 @@ extension UIView {
             view.heightAnchor.constraint(equalToConstant: size.height).isActive = true
         }
     }
-}
-
-func create<T>(_ setup: ((T) -> Void)) -> T where T: NSObject {
-    let object = T()
-    setup(object)
-    return object
 }

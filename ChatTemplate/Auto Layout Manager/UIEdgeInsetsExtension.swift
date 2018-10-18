@@ -1,6 +1,6 @@
 //
 //  UIEdgeInsetsExtension.swift
-//  ChatTemplate
+//  AutoLayoutManager
 //
 //  Created by Bibin Jacob Pulickal on 06/09/18.
 //  Copyright © 2018 Bibin Jacob Pulickal. All rights reserved.
@@ -50,6 +50,7 @@ extension UIEdgeInsets {
     
     init(top: CGFloat = 0, left: CGFloat = 0, leading: CGFloat = 0, bottom: CGFloat = 0, right: CGFloat = 0, trailing: CGFloat = 0, centerX: CGFloat = 0, centerY: CGFloat = 0) {
         self.init(top: top, left: left, bottom: bottom, right: right)
+        
         self.leading = leading
         self.trailing = trailing
         self.centerX = centerX
